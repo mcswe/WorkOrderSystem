@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Work Order System</title>
+</head>
+<body>
+  <h1>Work Order System</h1>
+  <h3>About</h3>
+  <p>The Work Order System is a completed Senior Project by four Computer Science students at Western Washington University. The project was a partnership with a geotechnical consulting firm, GeoEngineers.</p>
+
+  <h3>Motivation</h3>
+  <p>As a client, it can feel tedious to receive an email with a PDF attachment: the process requires you to print out the document, fill it out, scan it, upload it, and send it back. This was how GeoEngineers previously onboarded their vendors. The Work Order System team was tasked in helping GeoEngineers digitize this workflow so that vendors could quickly and easily submit forms online. The application was designed to be internal, such that the vendor data could be immediately stored in a database and easily accessed by GeoEngineers consultants.</p>
+
+  <h3>Operating Environment</h3>
+  <p>During this project, we utilized several languages and technologies.</p>
+  <ul>
+    <li>Development Environment:</li>
+    <ul>
+      <li>Primary Coding Language: JavaScript</li>
+      <li>Database Language: PostgreSQL</li>
+      <li>Frontend UI: React</li>
+      <li>Backend, Router and Server: NodeJS</li>
+    </ul>
+  </ul>
+  <p>IDE: VS Code</p>
+  <p>Version Control and Repository: Git via GitHub</p>
+  <p>Server Host and Authenticator: Amazon Web Services (AWS)</p>
+
+  <h3>Workflow</h3>
+  <img src="images/SequenceDiagram.png" width="400" height="400" />
+  <ol>
+    <li>A GeoEngineers user will look for a Vendor in an existing list of subcontractors.</li>
+    <li>When the Vendor is not found, the GeoEngineers user will create an entry for the company, including an email address.</li>
+    <li>The GeoEngineers user will then navigate to the Vendor Onboarding Request Page to request information from the recently added company.</li>
+    <ul>
+      <li>Upon request, the application will send an email to the Vendor, CC'ing the GeoEngineers user and including a link for the Vendor to fill out the Vendor Information Form.</li>
+    </ul>
+    <li>Once the Vendor submits the form, submission data is sent to the GeoEngineers database and triggers a status flag on the GeoEngineers Vendor Onboarding Request dashboard.</li>
+    <li>The GeoEngineers user will now see that their Vendor data has been received.</li>
+  </ol>
+
+  <h3>Design</h3>
+  <p>This is a design mock up for the Vendor Information Sheet, created using <i>Figma</i>:</p>
+  <img src="images/Feedback Form Mock up.png" width="550" height="400" />
+
+  <p>This is the result of the mock up:</p>
+  <img src="images/Feedback Form SS.png" width="400" height="500" />
+
+  <p>As mentioned in the <b>Workflow</b> section of this README, the data submitted by vendors in this form is then sent to GeoEngineers via a JSON POST request and stored in their database.</p>
+
+  <p>Although there were additional aspects to this project, screenshots may not be published publicly at this time. Additional information may be accessed upon request.</p>
+</body>
+</html>
